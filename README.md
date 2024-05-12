@@ -16,18 +16,21 @@
 <div align="center">
 
 **[<a href="https://arxiv.org/abs/2310.01728">Paper Page</a>]**
-**[<a href="https://www.youtube.com/watch?v=L-hRexVa32k&t=160s">Paper Explained</a>]**
-**[<a href="https://mp.weixin.qq.com/s/FSxUdvPI713J2LiHnNaFCw">中文解读1</a>]**
-**[<a href="https://mp.weixin.qq.com/s/nUiQGnHOkWznoBPqM0KHXg">中文解读2</a>]**
-**[<a href="https://zhuanlan.zhihu.com/p/676256783">中文解读3</a>]**
-**[<a href="https://mp.weixin.qq.com/s/ZnR33epXCB7N5Y_kO0YJ_w">中文解读4</a>]**
+**[<a href="https://www.youtube.com/watch?v=6sFiNExS3nI">YouTube Talk 1</a>]**
+**[<a href="https://www.youtube.com/watch?v=L-hRexVa32k">YouTube Talk 2</a>]**
+**[<a href="https://medium.com/towards-data-science/time-llm-reprogram-an-llm-for-time-series-forecasting-e2558087b8ac">Medium Blog</a>]**
+
+**[<a href="https://www.jiqizhixin.com/articles/2024-04-15?from=synced&keyword=TIME-LLM">机器之心中文解读</a>]**
+**[<a href="https://mp.weixin.qq.com/s/FSxUdvPI713J2LiHnNaFCw">时序人中文解读</a>]**
+**[<a href="https://mp.weixin.qq.com/s/nUiQGnHOkWznoBPqM0KHXg">AI算法厨房中文解读</a>]**
+**[<a href="https://zhuanlan.zhihu.com/p/676256783">知乎中文解读</a>]**
 
 
 </div>
 
 <p align="center">
 
-<img src="./figures/logo.png" width="60">
+<img src="./figures/logo.png" width="70">
 
 </p>
 
@@ -64,18 +67,21 @@ Notably, we show that time series analysis (e.g., forecasting) can be cast as ye
 </p>
 
 ## Requirements
-- accelerate==0.20.3
+Use python 3.11 from MiniConda
+
+- torch==2.2.2
+- accelerate==0.28.0
 - einops==0.7.0
 - matplotlib==3.7.0
 - numpy==1.23.5
 - pandas==1.5.3
 - scikit_learn==1.2.2
-- scipy==1.5.4
-- torch==2.0.1
+- scipy==1.12.0
 - tqdm==4.65.0
 - peft==0.4.0
 - transformers==4.31.0
-- deepspeed==0.13.0
+- deepspeed==0.14.0
+- sentencepiece==0.2.0
 
 To install all dependencies:
 ```
@@ -108,11 +114,23 @@ Please refer to ```run_main.py```, ```run_m4.py``` and ```run_pretrain.py``` for
 
 
 ## Further Reading
-1, [**Large Models for Time Series and Spatio-Temporal Data: A Survey and Outlook**](https://arxiv.org/abs/2310.10196), in *arXiv* 2023.
+1, [**Position Paper: What Can Large Language Models Tell Us about Time Series Analysis**](https://arxiv.org/abs/2402.02713), in *ICML* 2024.
+
+**Authors**: Ming Jin, Yifan Zhang, Wei Chen, Kexin Zhang, Yuxuan Liang*, Bin Yang, Jindong Wang, Shirui Pan, Qingsong Wen*
+
+```bibtex
+@inproceedings{jin2024position,
+   title={Position Paper: What Can Large Language Models Tell Us about Time Series Analysis}, 
+   author={Ming Jin and Yifan Zhang and Wei Chen and Kexin Zhang and Yuxuan Liang and Bin Yang and Jindong Wang and Shirui Pan and Qingsong Wen},
+  booktitle={International Conference on Machine Learning (ICML 2024)},
+  year={2024}
+}
+```
+
+2, [**Large Models for Time Series and Spatio-Temporal Data: A Survey and Outlook**](https://arxiv.org/abs/2310.10196), in *arXiv* 2023.
 [\[GitHub Repo\]](https://github.com/qingsongedu/Awesome-TimeSeries-SpatioTemporal-LM-LLM)
 
 **Authors**: Ming Jin, Qingsong Wen*, Yuxuan Liang, Chaoli Zhang, Siqiao Xue, Xue Wang, James Zhang, Yi Wang, Haifeng Chen, Xiaoli Li (IEEE Fellow), Shirui Pan*, Vincent S. Tseng (IEEE Fellow), Yu Zheng (IEEE Fellow), Lei Chen (IEEE Fellow), Hui Xiong (IEEE Fellow)
-
 
 ```bibtex
 @article{jin2023lm4ts,
@@ -123,19 +141,7 @@ Please refer to ```run_main.py```, ```run_m4.py``` and ```run_pretrain.py``` for
 }
 ```
 
-2, [**Position Paper: What Can Large Language Models Tell Us about Time Series Analysis**](https://arxiv.org/abs/2402.02713), in *arXiv* 2024.
 
-**Authors**: Ming Jin, Yifan Zhang, Wei Chen, Kexin Zhang, Yuxuan Liang*, Bin Yang, Jindong Wang, Shirui Pan, Qingsong Wen*
-
-
-```bibtex
-@article{jin2024position,
-   title={Position Paper: What Can Large Language Models Tell Us about Time Series Analysis}, 
-   author={Ming Jin and Yifan Zhang and Wei Chen and Kexin Zhang and Yuxuan Liang and Bin Yang and Jindong Wang and Shirui Pan and Qingsong Wen},
-  journal={arXiv preprint arXiv:2402.02713},
-  year={2024}
-}
-```
 3, [**Transformers in Time Series: A Survey**](https://arxiv.org/abs/2202.07125), in IJCAI 2023.
 [\[GitHub Repo\]](https://github.com/qingsongedu/time-series-transformers-review)
 
